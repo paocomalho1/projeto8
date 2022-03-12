@@ -501,6 +501,11 @@
     text-align: center;
   }
 }
+@media only screen and (max-width: 960px) {
+  .why__word-break {
+    display: none;
+  }
+}
 .why__itens {
   display: flex;
   margin-top: 4rem;
@@ -678,11 +683,13 @@
   margin-bottom: 0.5rem;
 }
 .latest-articles__item-titulo {
+  text-decoration: none;
   color: #2d314d;
   font-family: "Public Sans", sans-serif;
   font-weight: 400;
   margin-bottom: 1rem;
   display: block;
+  line-height: 1.25rem;
 }
 .latest-articles__item-titulo:hover {
   cursor: pointer;

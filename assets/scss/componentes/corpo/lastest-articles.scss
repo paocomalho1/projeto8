@@ -93,10 +93,12 @@
 
     }
     &__item-titulo{
+        text-decoration: none;
         color: $azul-escuro;
         @include Public-Sans-400;
         margin-bottom: 1rem;
         display: block;
+        line-height: 1.25rem;
         &:hover{
             cursor: pointer;
             color: $verde;
