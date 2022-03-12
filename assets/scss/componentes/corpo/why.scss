@@ -1,0 +1,107 @@
+@use "../../utilitarios" as *;
+
+.why{
+    background-color: $azul-cinza-claro;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../images/image-mockups.png);
+    background-repeat: no-repeat;
+    background-position-x: 750px;
+    background-position-y: -720px;
+    position: relative;
+    @include mini-celular{
+        height: 1600px !important;
+    }
+    @include celular{
+        height: 1200px;
+    }
+    &__conteiner{
+        @include celular{
+            display: flex;
+            flex-direction: column;
+        }
+
+
+    }
+    &__titulo{
+        color: $azul-escuro;
+        font-size: 3rem;
+        @include Public-Sans-400;
+        margin-bottom: 2rem;
+        @include celular{
+            text-align: center;
+        }
+
+    }
+    &__texto{
+        color: $azul-cinza;
+        line-height: 1.5rem;
+        @include Public-Sans-300;
+        @include celular{
+            text-align: center;
+        }
+
+    }
+    &__itens{
+        display: flex;
+        margin-top: 4rem;
+        @include celular{
+            display: flex;
+            flex-wrap: wrap;
+            //flex-direction: column;
+        }
+        @include mini-celular{
+            flex-wrap: nowrap;
+            flex-direction: column;
+        }
+
+    }
+    &__item{
+        margin-right: 1rem;
+        width: calc(25% - 1rem);
+        &:last-child{
+            margin-right: 0rem;   
+        }
+        @include celular{
+            width: calc(50% - 1rem);
+            display: flex;
+            flex-direction: column;
+            margin-top: 3rem;
+        }
+        @include mini-celular{
+            align-items: center;
+        }
+        @include mini-celular{
+            width: 100%;
+        }
+
+    }
+    &__icone{
+        background: url(../images/icon-online.svg) no-repeat center;
+        height: 80px;
+        width: 80px;
+        margin-bottom: 2rem;
+
+    }
+    &__item-titulo{
+        color: $azul-escuro;
+        @include Public-Sans-400;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        @include mini-celular{
+            text-align: center;
+        }
+
+    }
+    &__item-texto{
+        color: $azul-cinza;
+        @include Public-Sans-300;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        @include mini-celular{
+            text-align: center;
+        }
+
+    }
+}

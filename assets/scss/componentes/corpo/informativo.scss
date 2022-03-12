@@ -1,0 +1,73 @@
+@use "../../utilitarios" as *;
+
+
+.informativo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-image: url(../images/image-mockups.png),url(../images/bg-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-position-x: 750px,600px;
+    background-position-y: -20px,calc(-260px + 105px);
+    position: relative;
+    @include img-celular{
+        justify-content: flex-end;
+        height: 120vh;
+        background-image: url(../images/image-mockups.png),url(../images/bg-intro-mobile.svg);
+        background-position-x: 0px,0px;
+        background-position-y: -20px,72px;
+        background-size: 375px;
+        background-repeat: no-repeat;
+    }
+    &__conteiner{
+        margin-top: 105px;
+        width:38%;
+        @include mini-celular{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 72px;
+            margin-bottom: 5rem;
+        }
+
+    }
+    &__titulo{
+        color: $azul-escuro;
+        font-size: 3.5rem;
+        @include Public-Sans-400;
+        line-height: 4rem;
+        margin-bottom: 1rem;
+        @include mini-celular{
+            font-size: 2.6rem;
+            text-align:  center;
+        }
+
+    }
+    &__texto{
+        color: $azul-cinza;
+        @include Public-Sans-300;
+        line-height: 1.6rem;
+        margin-bottom: 2rem;
+        @include mini-celular{
+            font-size: 1rem;
+            text-align: center;
+        }
+    }
+    &__botao{
+        padding: 0.8rem 1.6rem;
+        border-radius: 1rem;
+        border: none;
+        color: $branco;
+        @include Public-Sans-700;
+        background-image: linear-gradient(45deg,$verde,$ciano);
+        opacity: 1;
+        &:hover{
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+    }
+}

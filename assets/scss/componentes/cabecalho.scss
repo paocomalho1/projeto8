@@ -1,0 +1,101 @@
+@use "../utilitarios" as *;
+
+.cabecalho{
+    z-index: 1;
+    position: fixed;
+    width: 88%;
+    padding: 2rem 0;
+    padding-right: 6%;
+    padding-left: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $branco;
+    @include celular{
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    &__logo{
+
+    }
+    &__menu{
+        margin-left: 24px;
+        display: flex;
+        @include celular{
+            align-items: center;
+        }
+
+    }
+    &__itens{
+        display: flex;
+        @include celular{
+            display: none;
+        }
+
+    }
+    &__item{
+        margin-right: 2rem;
+        position: relative;
+        &:last-child{
+            margin-right: 0rem;
+        }
+
+    }
+    &__link{
+        position: relative;
+        text-decoration: none;
+        color: $azul-cinza;
+        @include Public-Sans-300;
+        font-size: 1rem;
+        &:hover{
+            color: $azul-escuro;
+            &::before{
+                content: "";
+                left: 0;
+                right: 0;
+                background-image: linear-gradient(45deg,$verde,$ciano);
+                height: 5px;
+                position: absolute;
+                top: 57px;
+
+            }
+        }
+        
+
+    }
+    &__botao{
+        padding: 0.8rem 1.6rem;
+        border-radius: 1rem;
+        border: none;
+        color: $branco;
+        @include Public-Sans-700;
+        background-image: linear-gradient(45deg,$verde,$ciano);
+        opacity: 1;
+        @include celular{
+            display: none;
+        }
+        &:hover{
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+    }
+    &__hamburger{
+        display: none;
+        background: url(../images/icon-hamburger.svg) no-repeat center;
+        width: 24px;
+        height: 24px;
+        transition: all 300ms ease-in-out;
+        &:hover{
+            cursor: pointer;
+
+        }
+        @include celular{
+            display: block;
+        }
+    }
+}
+.hamburger__x{
+    background-image: url(../images/icon-close.svg);
+}

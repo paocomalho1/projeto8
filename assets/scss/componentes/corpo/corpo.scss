@@ -1,0 +1,28 @@
+@use "../../utilitarios" as *;
+
+.corpo{
+    
+    &__informativo{
+        height: 700px;
+        padding-left: 6%;
+        @include mini-celular{
+            height: 850px !important;
+            padding-right: 6%;
+        }
+
+
+    }
+    &__why{
+        height: 120vh;
+        padding-left: 6%;
+        padding-right: 6%;
+
+    }
+    
+    &__latest-articles{
+        height: 120vh;
+        padding-right: 6%;
+        padding-left: 6%;
+
+    }
+}

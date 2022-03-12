@@ -1,0 +1,15 @@
+@use "../utilitarios" as *;
+
+.overlay{
+    visibility: hidden;
+    display: none;
+    position: fixed;
+    top: 72px;
+    bottom: 0;
+    height: calc(100vh - 72x);
+    width: 100vw;
+    background-image: linear-gradient(180deg, $azul-escuro, transparent);
+    @include celular{
+        display: block;
+    }
+}

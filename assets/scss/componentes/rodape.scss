@@ -1,0 +1,161 @@
+@use "../utilitarios" as *;
+
+.rodape{
+    padding-right: 6%;
+    padding-left: 6%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: $azul-escuro;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include celular{
+        flex-direction: column;
+    }
+
+
+    &__conteiner-logo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        @include celular{
+            flex-direction: column;
+            width: 300px;
+        }
+        
+    }
+    &__logo{
+        margin-bottom: 3rem;
+
+    }
+    &__conteiner-icones{
+        display: flex;
+        @include celular{
+            margin-bottom: 2.0rem;
+        }
+
+
+    }
+    &__icones{
+        height: 24px;
+        width: 24px;
+        margin-right: 0.5rem;
+        &:first-child{
+            background: url(../images/icon-facebook.svg) no-repeat center;
+            &:hover{
+                background: url(../images/icon-facebookVerde.svg) no-repeat center;
+        }
+        }
+        &:nth-child(2){
+            background: url(../images/icon-youtube.svg) no-repeat center;
+            &:hover{
+                background: url(../images/icon-youtubeVerde.svg) no-repeat center;
+        }
+        }
+        &:nth-child(3){
+            background: url(../images/icon-twitter.svg) no-repeat center;
+            &:hover{
+                background: url(../images/icon-twitterVerde.svg) no-repeat center;
+        }
+        }
+        &:nth-child(4){
+            background: url(../images/icon-pinterest.svg) no-repeat center;
+            &:hover{
+                background: url(../images/icon-pinterestVerde.svg) no-repeat center;
+        }
+        }
+        &:last-child{
+            margin-right: 0;
+            background: url(../images/icon-instagram.svg) no-repeat center;
+            &:hover{
+                background: url(../images/icon-instagramVerde.svg) no-repeat center;
+        }
+        }
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__menu{
+
+    }
+    &__itens{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: calc(156px - 4rem);
+        @include celular{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+    }
+    &__item{
+        margin-bottom: 1rem;
+        &:nth-child(3){
+            margin-bottom: 0;
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+
+    }
+    &__link{
+        text-decoration: none;
+        color: $branco;
+        font-size: 1rem;
+        @include Public-Sans-300;
+        &:hover{
+            color: $verde;
+        }
+        
+
+    }
+    &__split{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 50%;
+        @include celular{
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+    &__conteiner-botao{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        @include celular{
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+
+    }
+    &__botao{
+        padding: 0.8rem 1.6rem;
+        border-radius: 1rem;
+        border: none;
+        color: $branco;
+        @include Public-Sans-700;
+        background-image: linear-gradient(45deg,$verde,$ciano);
+        opacity: 1;
+        @include celular{
+            margin-bottom: 2rem;
+            
+        }
+        &:hover{
+            opacity: 0.7;
+            cursor: pointer;
+        }
+        margin-bottom: 1.5rem;
+
+    }
+    &__copyright{
+        @include Public-Sans-400;
+        color: $azul-cinza;
+        font-size: 1rem;
+
+    }
+}

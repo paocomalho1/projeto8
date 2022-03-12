@@ -1,0 +1,115 @@
+@use "../../utilitarios" as *;
+
+.latest-articles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $cinza-claro;
+    padding: 5rem 0;
+    @include mini-celular{
+        height: 1700px;
+    }
+    &__conteiner{
+        margin-right: 6%;
+        margin-left: 6%;
+
+    }
+    &__titulo{
+        font-size: 2rem;
+        @include Public-Sans-400;
+        color: $azul-escuro;
+        margin-bottom: 3rem;
+        @include mini-celular{
+            text-align: center;
+        }
+
+    }
+    &__itens{
+        display: flex;
+        @include mini-celular{
+            flex-direction: column;
+        }
+        @include celular{
+            flex-wrap: wrap;
+            margin-right: 0;
+        }
+
+    }
+    &__item{
+        margin-right: 1.5rem;
+        background-color: $branco;
+        border-radius: 0.5rem;
+        &:last-child{
+            margin-right: 0rem;
+        }
+        @include mini-celular{
+            width: 100% !important;
+        }
+        @include celular{
+            width: calc(50% - .75rem);
+            margin-top: 1.5rem;
+            &:nth-child(2){
+                margin-left: 0;
+                margin-right: 0;
+            }
+            &:nth-child(4){
+                margin-left: 0;
+                margin-right: 0;
+            }
+            &:last-child{
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+        @include mini-celular{
+            margin-right: 0;
+            margin-top: 1.5rem;
+            &:first-child{
+                margin-top: 0rem;
+            }
+        }
+        
+
+    }
+    &__img{
+        border-top-right-radius: 0.5rem;
+        border-top-left-radius: 0.5rem;
+        height: 200px;
+        width: 100%;
+
+    }
+    &__conteiner-texto{
+        padding: 1rem;
+        @include mini-celular{
+            padding-top: 1.5rem;
+            padding-bottom: 2rem;
+        }
+    }
+    &__autor{
+        color: $azul-cinza;
+        @include Public-Sans-300;
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+
+    }
+    &__item-titulo{
+        color: $azul-escuro;
+        @include Public-Sans-400;
+        margin-bottom: 1rem;
+        display: block;
+        &:hover{
+            cursor: pointer;
+            color: $verde;
+        }
+        
+
+    }
+    &__item-texto{
+        color: $azul-cinza;
+        @include Public-Sans-300;
+        font-size: 0.9rem;
+        line-height: 1.0rem;
+
+    }
+    
+}

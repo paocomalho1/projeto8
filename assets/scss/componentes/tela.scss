@@ -1,0 +1,49 @@
+@use "../utilitarios" as *;
+
+.tela{
+    display: none;
+    visibility: hidden;
+    position: fixed;
+    top: calc(72px + 1.5rem);
+    background-color: $branco;
+    height: 285px;
+    width: 88vw;
+    border-radius: 0.35rem;
+    @include celular{
+        display: block;
+    }
+
+
+    &__menu{
+        margin: 2.5rem 0;
+
+    }
+    &__itens{
+
+    }
+    &__item{
+        margin-bottom: 1.75rem;
+        text-align: center;
+        &:last-child{
+            margin-bottom: 0rem;
+        }
+    }
+    &__link{
+        color: $azul-escuro;
+        @include Public-Sans-300;
+        text-decoration: none;
+        &:hover{
+            color: $azul-cinza;
+        }
+    }
+}
+.appearOpacity1{
+    animation: appearOpacity1 300ms ease-in-out forwards;
+}
+.disappearOpacity0{
+    animation: disappearOpacity0 300ms ease-in-out forwards;
+
+}
+.hamburgerAnimation{
+
+}
