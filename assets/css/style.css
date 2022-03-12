@@ -245,6 +245,9 @@
   color: #2d314d;
 }
 .cabecalho__link:hover::before {
+  opacity: 1;
+}
+.cabecalho__link::before {
   content: "";
   left: 0;
   right: 0;
@@ -252,6 +255,8 @@
   height: 5px;
   position: absolute;
   top: 57px;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
 }
 .cabecalho__botao {
   padding: 0.8rem 1.6rem;
@@ -262,6 +267,7 @@
   font-weight: 700;
   background-image: linear-gradient(45deg, #31d35c, #2bb7da);
   opacity: 1;
+  transition: all 300ms ease-in-out;
 }
 @media only screen and (max-width: 960px) {
   .cabecalho__botao {
@@ -447,6 +453,7 @@
   font-weight: 700;
   background-image: linear-gradient(45deg, #31d35c, #2bb7da);
   opacity: 1;
+  transition: all 300ms ease-in-out;
 }
 .informativo__botao:hover {
   cursor: pointer;
@@ -692,6 +699,7 @@
   margin-bottom: 1rem;
   display: block;
   line-height: 1.25rem;
+  transition: all 300ms ease-in-out;
 }
 .latest-articles__item-titulo:hover {
   cursor: pointer;
@@ -747,6 +755,7 @@
   height: 24px;
   width: 24px;
   margin-right: 0.5rem;
+  transition: all 300ms ease-in-out;
 }
 .rodape__icones:first-child {
   background: url(../images/icon-facebook.svg) no-repeat center;
@@ -806,6 +815,7 @@
   margin-bottom: 0;
 }
 .rodape__link {
+  transition: all 300ms ease-in-out;
   text-decoration: none;
   color: white;
   font-size: 1rem;
@@ -840,6 +850,7 @@
 }
 .rodape__botao {
   padding: 0.8rem 1.6rem;
+  transition: all 300ms ease-in-out;
   border-radius: 1rem;
   border: none;
   color: white;
