@@ -9,6 +9,7 @@
     height: 285px;
     width: 88vw;
     border-radius: 0.35rem;
+    z-index: 3;
     @include celular{
         display: block;
     }

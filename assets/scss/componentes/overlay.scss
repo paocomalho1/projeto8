@@ -9,6 +9,7 @@
     height: calc(100vh - 72x);
     width: 100vw;
     background-image: linear-gradient(180deg, $azul-escuro, transparent);
+    z-index: 1;
     @include celular{
         display: block;
     }
